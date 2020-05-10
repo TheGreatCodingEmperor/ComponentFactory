@@ -9,10 +9,11 @@ import { CComponent } from './c/c.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DynamicComponentComponent } from './dynamic-component/dynamic-component.component';
 import { TemplateComponent } from './template/template.component';
+import { DivComponent } from './div/div.component';
 
 
 @NgModule({
-  declarations: [DynamicComponentDirective, AComponent, BComponent, CComponent, DynamicComponentComponent, TemplateComponent],
+  declarations: [DynamicComponentDirective, AComponent, BComponent, CComponent, DynamicComponentComponent, TemplateComponent, DivComponent],
   imports: [
     ReactiveFormsModule,
     CommonModule,
@@ -21,7 +22,8 @@ import { TemplateComponent } from './template/template.component';
   entryComponents:[
     AComponent,
     BComponent,
-    CComponent
+    CComponent,
+    DivComponent
   ],
   exports:[
     DynamicComponentComponent

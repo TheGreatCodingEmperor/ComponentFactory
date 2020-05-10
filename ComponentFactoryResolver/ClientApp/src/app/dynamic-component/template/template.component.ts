@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewContainerRef, ViewChild, ViewChildren, QueryList, ChangeDetectorRef } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { FormlyStruct } from '../dynamic-component.service';
 
 @Component({
   selector: 'app-template',
@@ -7,8 +8,12 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./template.component.css']
 })
 export class TemplateComponent {
+  @ViewChildren('container', <any>{ read: ViewContainerRef,  static: false }) localContainers: QueryList<ViewContainerRef>;
   @Input() form:FormControl;
+  @Input() group:FormlyStruct[]=[];
 
-  constructor() { }
+  constructor(
+    protected cdref:ChangeDetectorRef
+  ) { }
 
 }

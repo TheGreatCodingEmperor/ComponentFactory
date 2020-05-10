@@ -3,6 +3,7 @@ import { AComponent } from './a/a.component';
 import { BComponent } from './b/b.component';
 import { CComponent } from './c/c.component';
 import { AbstractControl } from '@angular/forms';
+import { DivComponent } from './div/div.component';
 export interface FormlyStruct{
   id:string,
   type:string,
@@ -18,7 +19,8 @@ export class DynamicComponentService {
   private components = {
     a:AComponent,
     b:BComponent,
-    c:CComponent
+    c:CComponent,
+    div:DivComponent
   }
   constructor() { }
   getComponent(name:string){
