@@ -1,0 +1,9 @@
+
+
+<input type="text" [(ngModel)]="component" />
+{{form.value|json}}
+<div [formGroup]="form">
+    <ng-container #formly *ngFor="let item of struct;"></ng-container>
+    <!-- <app-dynamic-component *ngFor="let item of struct"  [component]="item.type"></app-dynamic-component> -->
+</div>
+
